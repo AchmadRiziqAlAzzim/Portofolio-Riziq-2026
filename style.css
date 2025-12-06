@@ -41,14 +41,13 @@ div {
 }
 
 
-@media (min-width: 1025px) and (max-width: 1492px) {
+@media (min-width: 1492px) {
     .responsive {
         max-width: 95%; 
-        background-color: #1f1e24;
     }
 
    #navbar {
-  margin-top: 11rem;
+  margin-top: 11rem !important;
 }
 
 }
