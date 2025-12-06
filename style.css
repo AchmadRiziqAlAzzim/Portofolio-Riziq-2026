@@ -442,8 +442,6 @@ div {
       height: 300px;
       overflow-y: auto;
       padding: 10px;
-      border: solid 2px black;
-      border-radius: 20px;
     }
     .msg {
       margin: 20px 0;
