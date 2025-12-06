@@ -27,7 +27,7 @@ html {
 
 .section-talking {
     width: 100%;
-    max-width: 82dvw;  /* batas di desktop biar ga kecil */
+    max-width: 82dvw;  
     margin: 100px auto 60px;
     padding: 0 20px;
 }
@@ -40,42 +40,30 @@ div {
     transition: 0.3s ease;
 }
 
-/* khusus buat layout besar (desktop wide) */
-@media (min-width: 1024px) {
+
+@media (min-width: 1025px) and (max-width: 1492px) {
     .responsive {
-        max-width: 85%; /* lebih rapat di layar besar */
+        max-width: 95%; 
+        background-color: #1f1e24;
     }
 
-    #navbar {
-        margin-top: 11rem;
-    }
+   #navbar {
+  margin-top: 11rem;
 }
 
-/* tablet */
-@media (max-width: 1024px) {
-    .section-talking {
-        max-width: 95vw; /* lebih melebar */
-    }
-
-    #navbar {
-        margin-top: 11rem;
-    }
 }
 
-/* HP */
-@media (max-width: 768px) {
-    .section-talking {
-        max-width: 100vw;  /* full lebar */
-        margin: 60px auto 50px;
-        padding: 0 17px;
+
+@media (min-width: 768px) and (max-width: 1024px) {
+     .responsive {
+        max-width: 100dvw; 
     }
 
-    #navbar {
-        margin-top: 11rem;
-    }
+   #navbar {
+  margin-top: 11rem;
+}
 }
 
-/* HP kecil banget */
 @media (max-width: 480px) {
     .section-talking {
         padding: 0 14px;
@@ -83,9 +71,7 @@ div {
     }
 }
 
-#navbar {
-  margin-top: 11rem;
-}
+
 
 .talk-title {
     font-size: 33px;     
