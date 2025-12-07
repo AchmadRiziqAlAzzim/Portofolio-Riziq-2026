@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
     <title>Portofolio | Riziq</title>
-</head>
-<body>
- <div class="d-flex justify-content-center">
+  </head>
+  <body>
+    <?php include 'system_backend.php'; ?>
+    <div class="d-flex justify-content-center">
       <div class="w-100 mt-4 m-3 mb-0 responsive">
         <div class="d-flex container d-inline d-xl-none" data-aos="fade-right">
           <div class="d-flex container justify-content-start">
@@ -364,31 +366,33 @@
 
 
 
-  <div class="container d-flex justify-content-center flex-column mb-5" style="max-width: 50rem;">
+<form method="POST">
+    <div class="container d-flex justify-content-center flex-column mb-5" style="max-width: 50rem;">
   <div class="p-2" data-aos="fade-up">
     <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label font_contact">Name<i class="fa-solid fa-user ms-2"></i></label>
-  <input type="email" class="form-control form-control-lg border border-2 border-dark" id="Riziq">
+  <input type="text" name="nama" class="form-control form-control-lg border border-2 border-dark" id="Riziq">
 </div>
   </div>
   <div class="p-2" data-aos="fade-up">
       <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label font_contact">Email<i class="fa-solid fa-eye ms-2"></i></label>
-  <input type="email" class="form-control form-control-lg border border-2 border-dark" id="exampleFormControlInput1">
+  <input type="email" name="email" class="form-control form-control-lg border border-2 border-dark" id="exampleFormControlInput1">
 </div>
   </div>
   <div class="p-2" data-aos="fade-up">
     <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label font_contact">Message<i class="fa-solid fa-message ms-2"></i></label>
  <div class="form-floating">
-  <textarea class="form-control border border-2 border-dark" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <textarea class="form-control border border-2 border-dark" name="pesan" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
 </div>
 </div>
   </div>
    <div class="p-2" data-aos="fade-up">
- <button class="btn btn-dark w-100 fw-bold">Kirim</button>
+ <button type="submit" class="btn btn-dark w-100 fw-bold" name="kirim">Kirim</button>
   </div>
 </div>
+</form>
 
 
   
