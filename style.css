@@ -370,7 +370,7 @@ div {
 }
 
 .sosial-footer ul li:active {
-  background: #ffffff;
+  background: #ffffff !important;
   color: white !important;
   box-shadow: 0 1px 0 #1f1e24;
   transform: translateY(4%);
