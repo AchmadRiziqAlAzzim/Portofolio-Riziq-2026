@@ -492,39 +492,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
- // Sandi Rahasia
-
-        const sandi_rahasia = "buka login";
-        const status = document.getElementById('status');
-        const buka = "login.html"
-        const sound = document.getElementById('audio');
-
-        // API - Penting
-
-        const SpeechRecognition = window.SpeechRecognition || window.WebkitSpeechRecognition;
-        if (SpeechRecognition) {
-            const suara = new SpeechRecognition();
-            suara.lang = "id-ID";
-            suara.continuous = true;
-            suara.interimResults = false;
-            suara.start();
-            
-            // Eksekusi
-            suara.onresult = (e) => {
-                const text = e.results[e.results.length - 1][0].transcript.toLowerCase();
-                if (text.includes(sandi_rahasia)) {
-                    window.location.href = buka;
-                    sound.play();
-                } else {
-                    echo("Terdeteksi: " + text);
-                }
-            }
-        }
-
-         const input = document.getElementById('input');
+const input = document.getElementById('input');
   const send = document.getElementById('send');
   const chatbox = document.getElementById('chatbox');
-  const API_KEY = "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"; // GANTI DENGAN API KEY OPENROUTER-MU
+  const API_KEY = "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"; 
 
   function addMessage(text, who) {
     const div = document.createElement('div');
@@ -559,6 +530,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const reply = data?.choices?.[0]?.message?.content || "Gagal mendapatkan jawaban.";
     addMessage(reply, 'ai');
   }
+
+  send.onclick = kirimPesan;
+  input.addEventListener("keydown", e => { if (e.key === "Enter") kirimPesan(); });
 
   send.onclick = kirimPesan;
   input.addEventListener("keydown", e => { if (e.key === "Enter") kirimPesan(); });
