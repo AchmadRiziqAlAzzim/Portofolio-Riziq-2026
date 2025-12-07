@@ -474,7 +474,10 @@ div {
       border-radius: 8px;
     }
 
-
+#button_search {
+  stroke:white;
+  fill: rgb(226, 43, 43);
+}
 
 
 
